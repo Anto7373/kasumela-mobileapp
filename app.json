@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "Kasumela",
+    "slug": "kasumela",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": [
+        "js",
+        "jsx",
+        "css"
+      ]
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.app.kasumela"
+    },
+    "web": {
+      "favicon": "./assets/logo.png"
+    },
+    "extra": {
+      "kasumela": {
+        "projectId": "baa72169-d36b-45a4-a562-948c6362c665"
+      },
+      "eas": {
+        "projectId": "8c53ea54-802f-4597-9c9f-f59793775e3d"
+      }
+    },
+    "plugins": [
+      [
+      "expo-build-properties",
+      {
+        "android": {
+          "usesCleartextTraffic": true
+        }
+      }
+      ]
+    ]
+  }
+}
