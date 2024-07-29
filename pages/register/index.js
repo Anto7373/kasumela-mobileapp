@@ -7,6 +7,8 @@ import MyButton from '../../components/MyButton';
 import { appStyles } from '../../components/appStyles';
 import { register } from '../../api';
 import Loader from '../../components/loader';
+import MyImage from '../../assets/header.png';
+import '../../assets/css/App.css'
 
 function Register(props) {
     const {navigation} = props;
@@ -70,6 +72,9 @@ function Register(props) {
                 null
             }
             {errorMessage && <Text style={appStyles.errorMessage}>{errorMessage}</Text>}
+            <div className="containerImg">
+                <img  src={MyImage}  />
+            </div>
             <View>
                 <Text style={[appStyles.mainTitle]}>
                     <MyText>Create an account!</MyText>
@@ -88,6 +93,9 @@ function Register(props) {
                 </MyText>
                 <MyLink onPress={() => navigation.navigate('Login')} text={"Login"} style={appStyles.secondaryLink} />
             </View>
+            <div className='privacy'>
+                <a className="privacyPolicy" href="http://kasumela.com/privacy-policy" target="_blank">Privacy Policy</a>
+            </div>
         </View>
     );
 }

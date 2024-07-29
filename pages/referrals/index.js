@@ -4,7 +4,8 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import MyTabButton from '../../components/MyTabButton';
 import { getFormattedAmount } from '../../utils';
 import { appStyles } from '../../components/appStyles';
-
+import MyImage from '../../assets/header.png';
+import '../../assets/css/App.css';
 import { getReferrals } from '../../api';
 import Loader from '../../components/loader';
 import { useAsyncStorage } from '@react-native-async-storage/async-storage';
@@ -68,6 +69,9 @@ function Referrals() {
                     :
                     null
                 }
+                <div className="containerImg">
+                    <img  src={MyImage}  />
+                </div>
                 <View style={appStyles.appHeader}>
                     <View style={appStyles.profileInfo}>
                         <Text style={appStyles.profileInfoText}>Referrals</Text>

@@ -5,7 +5,8 @@ import { appStyles } from '../../components/appStyles';
 import { useAsyncStorage } from '@react-native-async-storage/async-storage';
 import { getDashboardDetails } from '../../api';
 import Loader from '../../components/loader';
-
+import MyImage from '../../assets/header.png';
+import '../../assets/css/App.css'
 function Dashboard() {
     
     const getFontSizeForDashboardAmount = (amount) => {
@@ -76,6 +77,9 @@ function Dashboard() {
                     :
                     null
                 }
+                <div className="containerImg">
+                    <img  src={MyImage}  />
+                </div>
                 <View style={appStyles.appHeader}>
                     <View style={appStyles.profileInfo}>
                         <Text style={appStyles.profileInfoText}>Hello, {userProfileData ? userProfileData.firstName : ""}</Text>

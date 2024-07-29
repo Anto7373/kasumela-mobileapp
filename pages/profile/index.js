@@ -4,6 +4,8 @@ import MyText from '../../components/MyText';
 import MyButton from '../../components/MyButton';
 import { appStyles } from '../../components/appStyles';
 import { useAsyncStorage } from '@react-native-async-storage/async-storage';
+import MyImage from '../../assets/header.png';
+import '../../assets/css/App.css';
 
 function Profile(props) {
     const [userProfileData, setUserData] = React.useState(null);
@@ -18,7 +20,12 @@ function Profile(props) {
     }, []);
 
     return (
+        
         <View style={{ flex: 1, alignItems: "left", justifyContent: "center", padding: 50 }} className="main">
+
+                <div className="containerImg">
+                    <img  src={MyImage}  />
+                </div>
             {
             userProfileData
             ?
