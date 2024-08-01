@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text,Image,Linking } from 'react-native';
 import MyText from '../../components/MyText';
 import MyButton from '../../components/MyButton';
 import { appStyles } from '../../components/appStyles';
@@ -18,11 +18,17 @@ function Profile(props) {
     }, []);
 
     return (
+
+
         <View style={{ flex: 1, alignItems: "left", justifyContent: "center", padding: 50 }} className="main">
             {
             userProfileData
             ?
             <View>
+                <View style={appStyles.logoContainer}>
+                    <Image  style={appStyles.headerLogo}  source={require('../../assets/header_logo.png')}></Image>
+                </View>
+
                 <MyText style={[appStyles.mainTitle, appStyles.fontAlignLeft]}>Profile</MyText>
                 <MyText style={appStyles.profileLabel}>First Name</MyText>
                 <MyText style={appStyles.profileValue}>{userProfileData.firstName}</MyText>
@@ -39,6 +45,12 @@ function Profile(props) {
             null 
             }
             <MyButton onPress={() => props.onLogout(false)} text={"Signout"} />
+
+            <View style={appStyles.privacyPolicy} >
+                <Text style={appStyles.privacyPolicyText} onPress={() => Linking.openURL('http://kasumela.com/privacy-policy')}>
+                Privacy Policy
+                </Text>
+            </View>
         </View>
     );
 }

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, ImageBackground, Pressable } from 'react-native';
+import { View, ImageBackground, Pressable,Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -184,7 +184,8 @@ function Routes(props) {
         }
         <View style={appStyles.topIcon}>
           <Pressable onPress={() => showAddReferral()}>
-            <MaterialCommunityIcons name="account-plus" color={"white"} size={26} />
+            <Text>Refer your Friend $ Earn !</Text>
+            {/* <MaterialCommunityIcons name="account-plus" color={"white"} size={26} /> */}
           </Pressable>
         </View>
         <MyModal showModal={showModal} onClose={hideAddReferral} />

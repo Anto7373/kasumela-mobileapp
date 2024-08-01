@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text,Image,Linking } from 'react-native';
 import MyText from '../../components/MyText';
 import MyInput from '../../components/MyInput';
 import MyLink from '../../components/MyLink';
@@ -119,6 +119,9 @@ function ForgotPassword(props) {
             {
                 passwordPageStep == 1 ?
                 <>
+                <View style={appStyles.logoContainer}>
+                    <Image  style={appStyles.headerLogo}  source={require('../../assets/header_logo.png')}></Image>
+                </View>
                     <View>
                         <Text style={[appStyles.mainTitleLogin]}>
                             <MyText>Let's get your password reset</MyText>
@@ -148,6 +151,11 @@ function ForgotPassword(props) {
                     </View>
                 </>
             }
+               <View style={appStyles.privacyPolicy} >
+                    <Text style={appStyles.privacyPolicyText} onPress={() => Linking.openURL('http://kasumela.com/privacy-policy')}>
+                        Privacy Policy
+                    </Text>
+                </View>
         </View>
     );
 }

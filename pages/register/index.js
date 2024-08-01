@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text ,Image,Linking} from 'react-native';
 import MyText from '../../components/MyText';
 import MyInput from '../../components/MyInput';
 import MyLink from '../../components/MyLink';
@@ -70,6 +70,9 @@ function Register(props) {
                 null
             }
             {errorMessage && <Text style={appStyles.errorMessage}>{errorMessage}</Text>}
+            <View style={appStyles.logoContainer}>
+                    <Image  style={appStyles.headerLogo}  source={require('../../assets/header_logo.png')}></Image>
+                </View>
             <View>
                 <Text style={[appStyles.mainTitle]}>
                     <MyText>Create an account!</MyText>
@@ -87,6 +90,11 @@ function Register(props) {
                     Already have an account? 
                 </MyText>
                 <MyLink onPress={() => navigation.navigate('Login')} text={"Login"} style={appStyles.secondaryLink} />
+            </View>
+            <View style={appStyles.privacyPolicy} >
+                <Text style={appStyles.privacyPolicyText} onPress={() => Linking.openURL('http://kasumela.com/privacy-policy')}>
+                Privacy Policy
+                </Text>
             </View>
         </View>
     );

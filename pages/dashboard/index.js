@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import { View, Text, ScrollView,Image,Linking } from 'react-native';
 import { getFormattedAmount } from '../../utils';
 import { appStyles } from '../../components/appStyles';
 import { useAsyncStorage } from '@react-native-async-storage/async-storage';
@@ -76,6 +76,11 @@ function Dashboard() {
                     :
                     null
                 }
+
+                <View style={appStyles.logoContainer}>
+                    <Image  style={appStyles.headerLogo}  source={require('../../assets/header_logo.png')}></Image>
+                </View>
+
                 <View style={appStyles.appHeader}>
                     <View style={appStyles.profileInfo}>
                         <Text style={appStyles.profileInfoText}>Hello, {userProfileData ? userProfileData.firstName : ""}</Text>
@@ -124,6 +129,12 @@ function Dashboard() {
                     {
                         loading == false && ongoingLoans.length == 0 && <Text>No ongoing loans found</Text>
                     }
+                </View>
+                
+                <View style={appStyles.privacyPolicy} >
+                    <Text style={appStyles.privacyPolicyText} onPress={() => Linking.openURL('http://kasumela.com/privacy-policy')}>
+                        Privacy Policy
+                    </Text>
                 </View>
             </View>
         </ScrollView>

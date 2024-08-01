@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, ScrollView, Text } from 'react-native';
+import { View, ScrollView, Text, Image,Linking } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MyTabButton from '../../components/MyTabButton';
 import { getFormattedAmount } from '../../utils';
@@ -68,6 +68,9 @@ function Referrals() {
                     :
                     null
                 }
+                <View style={appStyles.logoContainer}>
+                    <Image  style={appStyles.headerLogo}  source={require('../../assets/header_logo.png')}></Image>
+                </View>
                 <View style={appStyles.appHeader}>
                     <View style={appStyles.profileInfo}>
                         <Text style={appStyles.profileInfoText}>Referrals</Text>
@@ -111,6 +114,12 @@ function Referrals() {
                         null
                     }
                 </View>
+            </View>
+            
+            <View style={appStyles.privacyPolicy} >
+                <Text style={appStyles.privacyPolicyText} onPress={() => Linking.openURL('http://kasumela.com/privacy-policy')}>
+                Privacy Policy
+                </Text>
             </View>
         </ScrollView>
     );

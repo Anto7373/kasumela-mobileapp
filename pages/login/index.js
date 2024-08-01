@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text,Image,Linking } from 'react-native';
 import MyText from '../../components/MyText';
 import MyInput from '../../components/MyInput';
 import MyLink from '../../components/MyLink';
@@ -75,7 +75,7 @@ function Login(props) {
     const handleRegister = () => {
         navigation.navigate('Register')
     }
-
+  
     return (
         <View style={appStyles.container} className="main">
             {
@@ -87,6 +87,11 @@ function Login(props) {
             }
             {errorMessage && <Text style={appStyles.errorMessage}>{errorMessage}</Text>}
             {showMessage && <Text style={appStyles.successMessage}>{showMessage}</Text>}
+
+            <View style={appStyles.logoContainer}>
+                <Image  style={appStyles.headerLogo}  source={require('../../assets/header_logo.png')}></Image>
+            </View>
+
             <View>
                 <Text style={[appStyles.mainTitleLogin]}>
                     <MyText>Let's Sign you in.</MyText>
@@ -114,6 +119,12 @@ function Login(props) {
                     Don't have an account? 
                 </MyText>
                 <MyLink onPress={() => handleRegister()} text={" Sign Up"} style={appStyles.secondaryLink} />
+            </View>
+            
+            <View style={appStyles.privacyPolicy} >
+                <Text style={appStyles.privacyPolicyText} onPress={() => Linking.openURL('http://kasumela.com/privacy-policy')}>
+                Privacy Policy
+                </Text>
             </View>
         </View>
     );

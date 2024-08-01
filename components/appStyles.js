@@ -18,7 +18,7 @@ export const appStyles = StyleSheet.create({
     },
     topIcon: {
         position: 'absolute',
-        top: 30,
+        bottom: 60,
         right: 20,
         backgroundColor: '#6682f7',
         borderRadius: 50,
@@ -390,6 +390,15 @@ export const appStyles = StyleSheet.create({
         width: "100%",
         alignItems: "center"
     },
+    logoContainer: {
+        position: 'absolute',
+        top: 0,
+        right: 10,
+    },
+    headerLogo: {
+      width: 100,
+      height: 60,
+    },
     // Login style ends
     // Profile style
     container: {
@@ -533,4 +542,13 @@ export const appStyles = StyleSheet.create({
         color: "#000"
     },
     // Referrals style ends
+    // privacy policy
+    privacyPolicy: {
+        position: 'absolute',
+        bottom:10
+    },
+    privacyPolicyText: {
+    color:'#9e5323',
+    fontWeight:600
+    }
 });
