@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, ImageBackground, Pressable,Text } from 'react-native';
+import { View, ImageBackground, Pressable } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -10,7 +10,7 @@ import Register from './pages/register';
 import Profile from './pages/profile';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import './assets/css/App.css';
+
 import { useFonts } from 'expo-font';
 import { useAsyncStorage } from '@react-native-async-storage/async-storage';
 import MyModal from './components/MyModal';
@@ -173,9 +173,7 @@ function Routes(props) {
       }
     </Tab.Screen>
   </Tab.Navigator>;
-  const referIcon ={
-    color:'#fff'
-  }
+
   return (
     <NavigationContainer>
       {
@@ -186,8 +184,7 @@ function Routes(props) {
         }
         <View style={appStyles.topIcon}>
           <Pressable onPress={() => showAddReferral()}>
-            {/* <MaterialCommunityIcons name="account-plus" color={"white"} size={26} /> */}
-            <Text style={referIcon}>Refer Your Friend & Earn !</Text>
+            <MaterialCommunityIcons name="account-plus" color={"white"} size={26} />
           </Pressable>
         </View>
         <MyModal showModal={showModal} onClose={hideAddReferral} />

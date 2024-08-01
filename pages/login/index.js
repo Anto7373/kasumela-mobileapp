@@ -7,8 +7,6 @@ import MyButton from '../../components/MyButton';
 import { appStyles } from '../../components/appStyles';
 import { login } from '../../api';
 import Loader from '../../components/loader';
-import MyImage from '../../assets/header.png';
-import '../../assets/css/App.css';
 
 function Login(props) {
     const {navigation, route} = props;
@@ -77,9 +75,7 @@ function Login(props) {
     const handleRegister = () => {
         navigation.navigate('Register')
     }
-    const styleimg = {
-    
-      };
+
     return (
         <View style={appStyles.container} className="main">
             {
@@ -91,16 +87,6 @@ function Login(props) {
             }
             {errorMessage && <Text style={appStyles.errorMessage}>{errorMessage}</Text>}
             {showMessage && <Text style={appStyles.successMessage}>{showMessage}</Text>}
-            <div className="containerImg">
-                <img style={styleimg} src={MyImage}  />
-            </div>
-            {/* <View >
-                <Image  style={[appStyles.imgKasumela]}
-                    source={require('../../assets/header-logo.png')} 
-                   
-                    />
-  
-    </View> */}
             <View>
                 <Text style={[appStyles.mainTitleLogin]}>
                     <MyText>Let's Sign you in.</MyText>
@@ -122,18 +108,13 @@ function Login(props) {
             <View style={appStyles.passwordContainer}>
                 <MyLink text={"Forgot Password?"} textStyle={appStyles.passwordLink} onPress={() => {navigation.navigate('ForgotPassword')}} />    
             </View>
-           
             <View style={appStyles.signUpContainer}>
                 <MyButton isDisabled={userName == "" || password == ""} onPress={(e) => handleLogin(e)} text={"Login"} />
                 <MyText style={appStyles.signUpText}>
                     Don't have an account? 
                 </MyText>
-               
                 <MyLink onPress={() => handleRegister()} text={" Sign Up"} style={appStyles.secondaryLink} />
             </View>
-            <div className='privacy'>
-                <a className="privacyPolicy" href="http://kasumela.com/privacy-policy" target="_blank">Privacy Policy</a>
-            </div>
         </View>
     );
 }
