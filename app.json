@@ -23,8 +23,7 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.app.kasumela"
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
@@ -46,12 +45,12 @@
     },
     "plugins": [
       [
-        "expo-build-properties",
-        {
-          "android": {
-            "usesCleartextTraffic": true
-          }
+      "expo-build-properties",
+      {
+        "android": {
+          "usesCleartextTraffic": true
         }
+      }
       ]
     ]
   }

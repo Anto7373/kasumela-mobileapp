@@ -18,7 +18,7 @@ export const appStyles = StyleSheet.create({
     },
     topIcon: {
         position: 'absolute',
-        bottom: 60,
+        top: 30,
         right: 20,
         backgroundColor: '#6682f7',
         borderRadius: 50,
@@ -377,9 +377,6 @@ export const appStyles = StyleSheet.create({
         fontWeight: 500,
         marginBottom: "1rem",
         paddingBottom: 15
-    },
-    imgKasumela: {
-        width: 10
     },
     subTitleLogin: {
         fontSize: 20,
