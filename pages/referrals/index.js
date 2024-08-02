@@ -115,12 +115,12 @@ function Referrals() {
                     }
                 </View>
             </View>
-            
+{/*             
             <View style={appStyles.privacyPolicy} >
                 <Text style={appStyles.privacyPolicyText} onPress={() => Linking.openURL('http://kasumela.com/privacy-policy')}>
                 Privacy Policy
                 </Text>
-            </View>
+            </View> */}
         </ScrollView>
     );
 }

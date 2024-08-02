@@ -184,7 +184,7 @@ function Routes(props) {
         }
         <View style={appStyles.topIcon}>
           <Pressable onPress={() => showAddReferral()}>
-            <Text>Refer your Friend $ Earn !</Text>
+            <Text style={appStyles.topIconText}>Refer your Friend & Earn !</Text>
             {/* <MaterialCommunityIcons name="account-plus" color={"white"} size={26} /> */}
           </Pressable>
         </View>

@@ -31,6 +31,9 @@ export const appStyles = StyleSheet.create({
         shadowRadius: 4,
         elevation: 5,
     },
+    topIconText: {
+        color:'#fff'
+    },
     pageContainer : {
         flex: 1,
         justifyContent: 'flex-start',

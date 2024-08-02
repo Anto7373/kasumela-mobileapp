@@ -131,11 +131,11 @@ function Dashboard() {
                     }
                 </View>
                 
-                <View style={appStyles.privacyPolicy} >
+                {/* <View style={appStyles.privacyPolicy} >
                     <Text style={appStyles.privacyPolicyText} onPress={() => Linking.openURL('http://kasumela.com/privacy-policy')}>
                         Privacy Policy
                     </Text>
-                </View>
+                </View> */}
             </View>
         </ScrollView>
     );
